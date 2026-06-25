@@ -5,14 +5,15 @@ type NavigationItemProps = {
 };
 
 export default function MenuItem({ item }: NavigationItemProps) {
-    return (
-        <a href={item.link || "#"} className="menu-item">
+    return <div className="menu-item">
+        <a href={item.link || "#"}>
             {item.label}
         </a>
-    )
+
+        {item.children && (
+            <div className="submenu">{item.children?.map((child) => (
+                <MenuItem key={child.label} item={child} />
+            ))}</div>
+        )}
+    </div >
 }
-
-
-// <a key={item.label} href="#">
-//     {item.label}
-// </a>
