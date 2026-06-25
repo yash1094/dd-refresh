@@ -1,1 +1,1 @@
-export type MenuItem = {label: string, link?: string,children?: MenuItem[]};
+export type NavigationItem = {label: string, link?: string,children?: NavigationItem[]};

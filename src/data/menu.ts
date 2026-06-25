@@ -1,7 +1,7 @@
-import type { MenuItem } from "../types/Menu";
+import type { NavigationItem } from "../types/Menu";
 
 
-export const menuItems: MenuItem[] = [
+export const menuItems: NavigationItem[] = [
   { label: "Campaigns", children: [] },
   { label: "Leads and Customers", children: [] },
   { label: "Reports", children: [] },
